@@ -1,0 +1,15 @@
+dna = "aaaabbcaa"
+print(f"dna = {dna}")
+
+new_dna = []
+for inx, char in enumerate(dna):
+  
+  if (len(new_dna) > 0 and new_dna[-1][0] == char):
+    counter += 1
+    new_dna[-1] = f"{char}{counter}"
+    
+  else:
+    counter = 1
+    new_dna.append(f"{char}{counter}")
+
+print("new_dna =", "".join(new_dna))
